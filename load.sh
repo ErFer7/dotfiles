@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load konsole config
-cp -f ./home/.config ~/.config/konsolerc
+cp -rf ./home/.config/konsolerc ~/.config
 cp -rf ./home/.local/share/konsole ~/.local/share
 cp -rf ./home/.local/share/kxmlgui5/konsole ~/.local/share/kxmlgui5
 
