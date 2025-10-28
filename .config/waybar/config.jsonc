@@ -1,110 +1,98 @@
 {
   "layer": "top",
+  "output": ["*"],
   "position": "top",
-  "mode": "dock",
-  "height": 30,
-  "spacing": 1,
-  "margin": 0,
-  "reload_style_on_change": true,
-  "modules-left": ["clock", "network", "backlight", "pulseaudio"],
+  "height": 32,
+  "modules-left": [
+    "custom/app-launcher",
+    "custom/divider",
+    "backlight",
+    "network",
+    "pulseaudio",
+    "custom/hyprsunset",
+  ],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["cpu", "memory", "temperature", "battery"],
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        },
-        "tooltip": true
+  "modules-right": ["clock", "cpu", "memory", "temperature", "battery"],
+  "margin": 4,
+  "spacing": 4,
+  "mode": "dock",
+  "start_hidden": false,
+  "modifier-reset": "press",
+  "exclusive": true,
+  "fixed-center": true,
+  "passthrough": false,
+  "ipc": false,
+  "include": [
+    "modules/app-launcher.jsonc",
+    "modules/divider.jsonc",
+    "modules/backlight.jsonc",
+    "modules/network.jsonc",
+    "modules/pulseaudio.jsonc",
+    "modules/hyprsunset.jsonc",
+  ],
+  "reload_style_on_change": true,
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉",
     },
-    "clock": {
-        "interval": 1,
-        "format": "󰥔 {:%F | %T}",
-        "format-alt": "󰥔 {:%T}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode"          : "month",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
-            "on-click-right": "mode",
-            "format": {
-                "months":     "<span color='#d3c6aa'><b>{}</b></span>",
-                "days":       "<span color='#e67e80'>{}</span>",
-                "weeks":      "<span color='#a7c080'><b>W{}</b></span>",
-                "weekdays":   "<span color='#7fbbb3'><b>{}</b></span>",
-                "today":      "<span color='#dbbc7f'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+    "tooltip": true,
+  },
+  "clock": {
+    "interval": 1,
+    "format": "  {:%T}",
+    "format-alt": "  {:%F | %T}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#d3c6aa'><b>{}</b></span>",
+        "days": "<span color='#e67e80'>{}</span>",
+        "weeks": "<span color='#a7c080'><b>W{}</b></span>",
+        "weekdays": "<span color='#7fbbb3'><b>{}</b></span>",
+        "today": "<span color='#dbbc7f'><b><u>{}</u></b></span>",
+      },
     },
-    "cpu": {
-        "format": "󰍛 {usage}%",
-        "tooltip": true,
-        "interval": 1,
-        "on-click": "kitty -e htop"
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
     },
-    "memory": {
-        "format": "󰘚 {}%",
-        "interval": 1,
-        "on-click": "kitty -e htop"
+  },
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "tooltip": true,
+    "interval": 1,
+    "on-click": "kitty -e htop",
+  },
+  "memory": {
+    "format": "󰘚 {}%",
+    "interval": 1,
+    "on-click": "kitty -e htop",
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["󱃃", "󰔏", "󱃂"],
+    "on-click": "kitty -e s-tui",
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15,
     },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["󱃃", "󰔏", "󱃂"],
-        "on-click": "kitty -e s-tui"
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰚥 {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
-    "network": {
-        "format-wifi": "󰖩 {essid} ({signalStrength}%)",
-        "format-ethernet": "󰈀 {ifname}",
-        "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": "󰖪 Disconnected",
-        "format-alt": "{ifname}: {ipaddr}",
-        "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "kitty -e nmtui"
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "󰂰 {volume}%",
-        "format-bluetooth-muted": "󰂲 {icon}",
-        "format-muted": "󰝟",
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "󰥰",
-            "headset": "󰋎",
-            "phone": "󰏲",
-            "portable": "󰄝",
-            "car": "󰄋",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "on-click": "pavucontrol",
-        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
-        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
-    },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
-    }
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
 }
