@@ -20,3 +20,10 @@ vim.keymap.set("v", "<M-C-Down>", ":'<,'>t '><CR>gv=gv")
 
 -- Save file
 vim.keymap.set({ "n", "v" }, "", ":w")
+
+-- Copy and paste for normal people
+vim.keymap.set({ "n", "v" }, "", '"+y')
+vim.keymap.set({ "n", "v" }, "", '"+p')
+
+-- Select all
+vim.keymap.set({ "n", "v" }, "", "ggVG")
