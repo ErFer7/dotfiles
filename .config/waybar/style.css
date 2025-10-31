@@ -14,16 +14,20 @@
 
 /* Module-specific colors */
 @define-color workspaces-color @foreground;
-@define-color workspaces-focused-bg @green;
-@define-color workspaces-focused-fg @cyan;
-@define-color workspaces-urgent-bg @red;
-@define-color workspaces-urgent-fg @black;
+@define-color workspaces-empty-fg @foreground;
+@define-color workspaces-visible-fg @foreground;
+@define-color workspaces-active-fg @cyan;
+@define-color workspaces-urgent-fg @red;
 
 /* Text and border colors for modules */
 @define-color app-launcher-color @cyan;
 @define-color divider-color @foreground;
+@define-color backlight-color @foreground;
+@define-color network-color @blue;
+@define-color network-disconnected-color @red;
+@define-color pulseaudio-color @magenta;
+@define-color pulseaudio-muted-color @red;
 @define-color hyprsunset-color @yellow;
-@define-color playerctl-color @magenta;
 @define-color clock-color @cyan;
 @define-color cpu-color @blue;
 @define-color memory-color @magenta;
@@ -33,17 +37,7 @@
 @define-color battery-charging-color @green;
 @define-color battery-warning-color @yellow;
 @define-color battery-critical-color @red;
-@define-color network-color @blue;
-@define-color network-disconnected-color @red;
-@define-color pulseaudio-color @magenta;
-@define-color pulseaudio-muted-color @red;
-@define-color backlight-color @foreground;
-@define-color disk-color @cyan;
-@define-color uptime-color @green;
-@define-color updates-color @orange;
-@define-color quote-color @green;
-@define-color idle-inhibitor-color @foreground;
-@define-color idle-inhibitor-active-color @red;
+@define-color power-button-color @foreground;
 
 * {
   /* Base styling for all modules */
@@ -64,31 +58,25 @@ window#waybar {
 /* Common module styling with border-bottom */
 #custom-app-launcher,
 #custom-divider,
-#mpd,
+#network,
+#backlight,
+#pulseaudio,
 #custom-hyprsunset,
-#custom-playerctl,
 #clock,
 #cpu,
 #memory,
 #temperature,
 #battery,
-#network,
-#pulseaudio,
-#backlight,
-#disk,
-#custom-uptime,
-#custom-updates,
-#custom-quote,
-#idle_inhibitor,
+#custom-power-button,
 #tray {
-  padding: 0 10px;
+  padding: 0 8px;
   margin: 0 2px;
   background-color: transparent;
 }
 
 /* Workspaces styling */
 #workspaces button {
-  padding: 0 10px;
+  padding: 0 12px 0 6px;
   background-color: transparent;
   color: @workspaces-color;
   margin: 0;
@@ -99,20 +87,27 @@ window#waybar {
   box-shadow: inherit;
 }
 
-#workspaces button.focused {
-  box-shadow: inset 0 -2px @workspaces-focused-fg;
-  color: @workspaces-focused-fg;
+#workspaces button.empty {
+  color: @workspaces-empty-fg;
+}
+
+#workspaces button.visible {
+  color: @workspaces-visible-fg;
+}
+
+#workspaces button.active {
+  color: @workspaces-active-fg;
   font-weight: 900;
 }
 
 #workspaces button.urgent {
-  background-color: @workspaces-urgent-bg;
   color: @workspaces-urgent-fg;
 }
 
 /* Module-specific styling */
 #custom-app-launcher {
   color: @app-launcher-color;
+  margin-left: 10px;
 }
 
 #custom-divider {
@@ -120,29 +115,32 @@ window#waybar {
   opacity: 0.1;
 }
 
-#mpd.disconnected,
-#mpd.stopped {
-  color: @foreground;
+#backlight {
+  color: @backlight-color;
 }
 
-#custom-playerctl {
-  color: @playerctl-color;
+#network {
+  color: @network-color;
 }
 
-#custom-playerctl.Playing {
-  color: @cyan;
+#network.disconnected {
+  color: @network-disconnected-color;
 }
 
-#custom-playerctl.Paused {
-  color: @orange;
+#pulseaudio {
+  color: @pulseaudio-color;
 }
 
-#clock {
-  color: @clock-color;
+#pulseaudio.muted {
+  color: @pulseaudio-muted-color;
 }
 
 #custom-hyprsunset {
   color: @hyprsunset-color;
+}
+
+#clock {
+  color: @clock-color;
 }
 
 #cpu {
@@ -178,58 +176,7 @@ window#waybar {
   color: @battery-critical-color;
 }
 
-#network {
-  color: @network-color;
-}
-
-#network.disconnected {
-  color: @network-disconnected-color;
-}
-
-#pulseaudio {
-  color: @pulseaudio-color;
-}
-
-#pulseaudio.muted {
-  color: @pulseaudio-muted-color;
-}
-
-#backlight {
-  color: @backlight-color;
-}
-
-#disk {
-  color: @disk-color;
-}
-
-#custom-uptime {
-  color: @uptime-color;
-}
-
-#custom-updates {
-  color: @updates-color;
-}
-
-#idle_inhibitor {
-  color: @idle-inhibitor-color;
-}
-
-#idle_inhibitor.activated {
-  color: @idle-inhibitor-active-color;
-}
-
-#tray {
-  background-color: transparent;
-  padding: 0 10px;
-  margin: 0 2px;
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  color: @red;
-  border-bottom-color: @red;
+#custom-power-button {
+  color: @power-button-color;
+  margin-right: 10px;
 }
