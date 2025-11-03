@@ -1,0 +1,7 @@
+{
+  "custom/app-launcher": {
+    "format": "",
+    "tooltip-format": "Lauch apps",
+    "on-click": "tofi-drun --drun-launch=true",
+  },
+}

@@ -1,0 +1,7 @@
+{
+  "memory": {
+    "format": "󰘚 {used}GiB",
+    "interval": 1,
+    "on-click": "kitty -e htop",
+  },
+}
