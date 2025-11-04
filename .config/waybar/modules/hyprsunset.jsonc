@@ -1,0 +1,11 @@
+{
+  "custom/hyprsunset": {
+    "exec": "sleep 1 && ~/.config/waybar/scripts/hyprsunset.sh",
+    "exec-on-event": true,
+    "return-type": "json",
+    "interval": "once",
+    "format": "{icon}",
+    "format-icons": { "disabled": "", "enabled": "󰤄" },
+    "on-click": "~/.config/waybar/scripts/hyprsunset.sh toggle",
+  },
+}

@@ -1,0 +1,182 @@
+/* Tokyo Night */
+@define-color background #1a1b26;
+@define-color background-light #24283b;
+@define-color foreground #c0caf5;
+@define-color black #15161e;
+@define-color red #f7768e;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color blue #7aa2f7;
+@define-color magenta #bb9af7;
+@define-color cyan #7dcfff;
+@define-color white #a9b1d6;
+@define-color orange #ff9e64;
+
+/* Module-specific colors */
+@define-color workspaces-color @foreground;
+@define-color workspaces-empty-fg @foreground;
+@define-color workspaces-visible-fg @foreground;
+@define-color workspaces-active-fg @cyan;
+@define-color workspaces-urgent-fg @red;
+
+/* Text and border colors for modules */
+@define-color app-launcher-color @cyan;
+@define-color divider-color @foreground;
+@define-color backlight-color @foreground;
+@define-color network-color @blue;
+@define-color network-disconnected-color @red;
+@define-color pulseaudio-color @magenta;
+@define-color pulseaudio-muted-color @red;
+@define-color hyprsunset-color @yellow;
+@define-color clock-color @cyan;
+@define-color cpu-color @blue;
+@define-color memory-color @magenta;
+@define-color temperature-color @yellow;
+@define-color temperature-critical-color @red;
+@define-color battery-color @cyan;
+@define-color battery-charging-color @green;
+@define-color battery-warning-color @yellow;
+@define-color battery-critical-color @red;
+@define-color power-button-color @foreground;
+
+* {
+  /* Base styling for all modules */
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: @background;
+  color: @foreground;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+/* Common module styling with border-bottom */
+#custom-app-launcher,
+#custom-divider,
+#network,
+#backlight,
+#pulseaudio,
+#custom-hyprsunset,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#custom-power-button,
+#tray {
+  padding: 0 8px;
+  margin: 0 2px;
+  background-color: transparent;
+}
+
+/* Workspaces styling */
+#workspaces button {
+  padding: 0 12px 0 6px;
+  background-color: transparent;
+  color: @workspaces-color;
+  margin: 0;
+}
+
+#workspaces button:hover {
+  background: @background-light;
+  box-shadow: inherit;
+}
+
+#workspaces button.empty {
+  color: @workspaces-empty-fg;
+}
+
+#workspaces button.visible {
+  color: @workspaces-visible-fg;
+}
+
+#workspaces button.active {
+  color: @workspaces-active-fg;
+  font-weight: 900;
+}
+
+#workspaces button.urgent {
+  color: @workspaces-urgent-fg;
+}
+
+/* Module-specific styling */
+#custom-app-launcher {
+  color: @app-launcher-color;
+  margin-left: 10px;
+}
+
+#custom-divider {
+  color: @divider-color;
+  opacity: 0.1;
+}
+
+#backlight {
+  color: @backlight-color;
+}
+
+#network {
+  color: @network-color;
+}
+
+#network.disconnected {
+  color: @network-disconnected-color;
+}
+
+#pulseaudio {
+  color: @pulseaudio-color;
+}
+
+#pulseaudio.muted {
+  color: @pulseaudio-muted-color;
+}
+
+#custom-hyprsunset {
+  color: @hyprsunset-color;
+}
+
+#clock {
+  color: @clock-color;
+}
+
+#cpu {
+  color: @cpu-color;
+}
+
+#memory {
+  color: @memory-color;
+}
+
+#temperature {
+  color: @temperature-color;
+}
+
+#temperature.critical {
+  color: @temperature-critical-color;
+}
+
+#battery {
+  color: @battery-color;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @battery-charging-color;
+}
+
+#battery.warning:not(.charging) {
+  color: @battery-warning-color;
+}
+
+#battery.critical:not(.charging) {
+  color: @battery-critical-color;
+}
+
+#custom-power-button {
+  color: @power-button-color;
+  margin-right: 10px;
+}

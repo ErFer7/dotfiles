@@ -1,0 +1,11 @@
+{
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-wifi": "{icon}  {essid}",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰤭 Disconnected",
+    "tooltip-format": "{essid} ({signalStrength})% | {ifname}: {ipaddr}",
+    "on-click": "kitty --config ~/.config/kitty/nmtui-kitty.conf nmtui",
+  },
+}
