@@ -1,6 +1,0 @@
-{
-  "custom/power-button": {
-    "format": "",
-    "on-click": "wlogout --buttons-per-row 6",
-  },
-}

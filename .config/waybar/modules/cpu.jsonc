@@ -1,8 +1,0 @@
-{
-  "cpu": {
-    "format": "󰍛 {usage}%",
-    "tooltip": true,
-    "interval": 1,
-    "on-click": "kitty -e htop",
-  },
-}
