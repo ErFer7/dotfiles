@@ -1,6 +1,6 @@
 {
   "memory": {
-    "format": "󰘚 {used}GiB",
+    "format": "󰘚 {used:05}GiB",
     "interval": 1,
     "on-click": "kitty -e htop",
   },
