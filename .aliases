@@ -2,6 +2,6 @@
 
 alias update="sudo pacman -Syu;yay"
 alias useless='pacman -Qdtq'
-alias autoremove='pacman -Qdtq | pacman -Rs -'
+alias autoremove='pacman -Qdtq | sudo pacman -Rs -'
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
