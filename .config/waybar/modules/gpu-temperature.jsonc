@@ -1,0 +1,11 @@
+{
+  "custom/gpu-temperature": {
+    "return-type": "json",
+    "format": "{icon} {text}°C",
+    "format-icons": {"0": "󱃃", "1": "󰔏", "2": "󱃂"},
+    "exec": "~/.config/waybar/scripts/gpu-temperature.sh",
+    "tooltip": true,
+    "interval": 1,
+    "on-click": "kitty -e nvtop",
+  },
+}
