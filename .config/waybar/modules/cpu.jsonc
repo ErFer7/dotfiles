@@ -3,6 +3,6 @@
     "format": "󰍛 {usage:03}%",
     "tooltip": true,
     "interval": 1,
-    "on-click": "kitty -e htop",
+    "on-click": "kitty -e btop",
   },
 }

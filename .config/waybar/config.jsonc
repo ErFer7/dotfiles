@@ -10,7 +10,6 @@
     "network",
     "pulseaudio",
     "custom/hyprsunset",
-    "custom/divider",
     "tray",
   ],
   "modules-center": ["hyprland/workspaces"],
