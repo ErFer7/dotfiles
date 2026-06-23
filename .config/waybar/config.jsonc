@@ -10,6 +10,7 @@
     "network",
     "pulseaudio",
     "custom/hyprsunset",
+    "tray",
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
@@ -37,6 +38,7 @@
     "modules/network.jsonc",
     "modules/pulseaudio.jsonc",
     "modules/hyprsunset.jsonc",
+    "modules/tray.jsonc",
     "modules/workspaces.jsonc",
     "modules/clock.jsonc",
     "modules/cpu.jsonc",

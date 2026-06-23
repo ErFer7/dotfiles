@@ -3,9 +3,11 @@
 -- Add any additional options here
 
 local opt = vim.opt
+local global = vim.g
 
 opt.tabstop = 4
 opt.expandtab = true
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.relativenumber = false
+global.autoformat = false
