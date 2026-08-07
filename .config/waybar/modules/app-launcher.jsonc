@@ -2,6 +2,6 @@
   "custom/app-launcher": {
     "format": "",
     "tooltip-format": "Lauch apps",
-    "on-click": "tofi-drun --drun-launch=true",
+    "on-click": "pkill fsel || kitty --title launcher -e fsel -d",
   },
 }

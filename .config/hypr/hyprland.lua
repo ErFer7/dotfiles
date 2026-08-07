@@ -29,7 +29,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "kitty -e yazi"
-local menu = "tofi-drun --drun-launch=true"
+local menu = "pkill fsel || kitty --title launcher -e fsel -d"
 
 -------------------
 ---- AUTOSTART ----
@@ -256,7 +256,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("pkill wlogout || wlogout --buttons-per-row 6"))
 
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill tofi || " .. menu), { release = true })
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(menu))
 hl.bind("CTRL + ALT + T", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
@@ -353,6 +353,15 @@ hl.window_rule({
 	name = "windowrule-1",
 	match = { class = ".*" },
 	suppress_event = "maximize",
+})
+
+hl.window_rule({
+	match = {
+		title = "launcher",
+	},
+	float = true,
+	center = true,
+	size = { 500, 430 },
 })
 
 -- Fix some dragging issues with XWayland
