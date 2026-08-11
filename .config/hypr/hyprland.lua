@@ -46,7 +46,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("openrgb --noautoconnect --profile White.orp")
 	hl.exec_cmd("easyeffects --hide-window")
-	hl.exec_cmd("hyprlauncher -d")
 end)
 
 -------------------------------
