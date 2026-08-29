@@ -17,12 +17,6 @@
     "keybind" : "u"
 }
 {
-    "label" : "hibernate",
-    "action" : "~/.config/wlogout/power-controls lock hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
-}
-{
     "label" : "shutdown",
     "action" : "~/.config/wlogout/power-controls shutdown",
     "text" : "Shutdown",

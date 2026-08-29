@@ -12,7 +12,7 @@ suspend)
     sleep 1
     systemctl suspend
     ;;
-hibernate)
+hibernate)  # NOTE: This won't  be used
     lock_screen
     systemctl hibernate
     ;;

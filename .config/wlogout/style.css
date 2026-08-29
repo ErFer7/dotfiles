@@ -33,7 +33,7 @@ button:focus {
 
 #lock {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/lock_white.png")
+    url("./icons/lock_white.png")
   );
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
@@ -42,61 +42,61 @@ button:focus {
 
 button:focus#lock {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/lock_black.png")
+    url("./icons/lock_black.png")
   );
 }
 
 #logout {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/logout_white.png")
+    url("./icons/logout_white.png")
   );
 }
 
 button:focus#logout {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/logout_black.png")
+    url("./icons/logout_black.png")
   );
 }
 
 #suspend {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/suspend_white.png")
+    url("./icons/suspend_white.png")
   );
 }
 
 button:focus#suspend {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/suspend_black.png")
+    url("./icons/suspend_black.png")
   );
 }
 
 #hibernate {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/hibernate_white.png")
+    url("./icons/hibernate_white.png")
   );
 }
 
 button:focus#hibernate {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/hibernate_black.png")
+    url("./icons/hibernate_black.png")
   );
 }
 
 #shutdown {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/shutdown_white.png")
+    url("./icons/shutdown_white.png")
   );
 }
 
 button:focus#shutdown {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/shutdown_black.png")
+    url("./icons/shutdown_black.png")
   );
 }
 
 #reboot {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/reboot_white.png")
+    url("./icons/reboot_white.png")
   );
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
@@ -105,7 +105,7 @@ button:focus#shutdown {
 
 button:focus#reboot {
   background-image: image(
-    url("/home/erfer/.config/wlogout/icons/reboot_black.png")
+    url("./icons/reboot_black.png")
   );
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
