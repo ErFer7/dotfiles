@@ -1,0 +1,11 @@
+export HEFER_MACHINE_TYPE="desktop"
+
+export CURSOR_SIZE="24"
+export DG_MENU_PREFIX="arch-"
+
+if [ "$HEFER_MACHINE_TYPE" = "desktop" ]; then
+    export GTK_IM_MODULE="wayland"
+    export XMODIFIERS="@im=ibus"
+    export QT_IM_MODULES="wayland;ibus"
+    export QT_IM_MODULE="ibus"
+fi
