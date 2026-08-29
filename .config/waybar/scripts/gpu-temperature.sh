@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if ! command -v nvidia-smi &> /dev/null; then
+    echo ""
+    exit 1
+fi
+
 RAW_TEMPERATURE=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)
 
 TEMPERATURE=$(printf "%0*d" 2 "$RAW_TEMPERATURE")
