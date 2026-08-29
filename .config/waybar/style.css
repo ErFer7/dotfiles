@@ -30,6 +30,7 @@
 @define-color hyprsunset-color @yellow;
 @define-color clock-color @cyan;
 @define-color cpu-color @blue;
+@define-color gpu-color @green;
 @define-color memory-color @magenta;
 @define-color temperature-color @yellow;
 @define-color temperature-critical-color @red;
@@ -64,12 +65,14 @@ window#waybar {
 #custom-hyprsunset,
 #clock,
 #cpu,
+#custom-gpu,
+#custom-gpu-temperature,
 #memory,
 #temperature,
 #battery,
 #custom-power-button,
 #tray {
-  padding: 0 8px;
+  padding: 0 6px;
   margin: 0 2px;
   background-color: transparent;
 }
@@ -139,6 +142,10 @@ window#waybar {
   color: @hyprsunset-color;
 }
 
+#custom-gpu {
+  color: @gpu-color;
+}
+
 #clock {
   color: @clock-color;
 }
@@ -156,6 +163,14 @@ window#waybar {
 }
 
 #temperature.critical {
+  color: @temperature-critical-color;
+}
+
+#custom-gpu-temperature {
+  color: @temperature-color;
+}
+
+#custom-gpu-temperature.critical {
   color: @temperature-critical-color;
 }
 

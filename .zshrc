@@ -1,6 +1,8 @@
 # Env
 PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 PATH=$HOME/Executables:$PATH
+PATH=/usr/lib/rustup/bin/:$PATH
+PATH=$HOME/.cargo/bin:$PATH
 
 # Path
 export PATH=$PATH
@@ -21,6 +23,6 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source .aliases
+source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh

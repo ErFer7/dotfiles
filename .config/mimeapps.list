@@ -1,0 +1,17 @@
+[Added Associations]
+application/json=nvim.desktop;firefox.desktop;libreoffice-writer.desktop;zotero.desktop;
+application/pdf=papers-3.desktop;papers-2.desktop;papers.desktop;
+image/jpeg=org.kde.gwenview.desktop;gimp.desktop;firefox.desktop;
+image/png=gwenview.desktop;gwenview-3.desktop;gwenview-2.desktop;
+text/plain=nvim.desktop;libreoffice-writer.desktop;zotero.desktop;
+text/x-csrc=nvim.desktop;zotero.desktop;libreoffice-writer.desktop;
+
+[Default Applications]
+application/json=nvim.desktop;
+application/pdf=papers-3.desktop;
+application/x-python-code=nvim.desktop;
+image/jpeg=org.kde.gwenview.desktop;
+image/png=gwenview.desktop;
+text/markdown=nvim.desktop;
+text/plain=nvim.desktop;
+text/x-csrc=nvim.desktop;

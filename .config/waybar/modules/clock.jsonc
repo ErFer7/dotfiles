@@ -1,11 +1,11 @@
 {
   "clock": {
     "interval": 1,
-    "format": "  {:%T}",
-    "format-alt": "  {:%F | %T}",
+    "format": "  {:%F | %T}",
+    "format-alt": "  {:%T}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode": "month",
+      "mode": "year",
       "mode-mon-col": 3,
       "weeks-pos": "right",
       "on-scroll": 1,
