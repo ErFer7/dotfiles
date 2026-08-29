@@ -27,6 +27,15 @@
 @define-color network-disconnected-color @red;
 @define-color pulseaudio-color @magenta;
 @define-color pulseaudio-muted-color @red;
+@define-color bluetooth-color @white;
+@define-color bluetooth-disabled-color @red;
+@define-color bluetooth-off-color @white;
+@define-color bluetooth-on-color @blue;
+@define-color bluetooth-connected-color @blue;
+@define-color bluetooth-no-controller-color @red;
+@define-color bluetooth-discoverable-color @blue;
+@define-color bluetooth-discovering-color @blue;
+@define-color bluetooth-pairable-color @blue;
 @define-color hyprsunset-color @yellow;
 @define-color clock-color @cyan;
 @define-color cpu-color @blue;
@@ -61,6 +70,7 @@ window#waybar {
 #network,
 #backlight,
 #pulseaudio,
+#bluetooth,
 #custom-hyprsunset,
 #clock,
 #cpu,
@@ -133,6 +143,42 @@ window#waybar {
 
 #pulseaudio.muted {
   color: @pulseaudio-muted-color;
+}
+
+#bluetooth {
+    color: @bluetooth;
+}
+
+#bluetooth.disabled {
+    color: @bluetooth-disabled-color;
+}
+
+#bluetooth.off {
+    color: @bluetooth-off-color;
+}
+
+#bluetooth.on {
+    color: @bluetooth-on-color;
+}
+
+#bluetooth.connected {
+    color: @bluetooth-connected-color;
+}
+
+#bluetooth.no-controller {
+    color: @bluetooth-no-controller-color;
+}
+
+#bluetooth.discoverable {
+    color: @bluetooth-discoverable-color;
+}
+
+#bluetooth.discovering {
+    color: @bluetooth-discovering-color;
+}
+
+#bluetooth.pairable {
+    color: @bluetooth-pairable-color;
 }
 
 #custom-hyprsunset {
