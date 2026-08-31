@@ -1,5 +1,5 @@
 -- TODO: See what can be unified in common files
--- NOTE: There are not permissions configured, this is anarchy
+-- NOTE: There are no permissions configured, this is anarchy
 
 local machine_type = os.getenv("HEFER_MACHINE_TYPE")
 

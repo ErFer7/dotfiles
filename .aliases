@@ -7,3 +7,4 @@ alias autoremove='pacman -Qdtq | sudo pacman -Rs -'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 alias launch-isis='docker compose -f docker-compose-all-apps-dev.yml build && docker compose -f docker-compose-all-apps-dev.yml up'
+alias launch-isis-dev='docker compose -f docker-compose-all-apps-dev.yml build && docker compose -f docker-compose-all-apps-dev.yml --profile dev up'
