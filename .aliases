@@ -8,4 +8,5 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 alias launch-isis='docker compose -f docker-compose-all-apps-dev.yml build && docker compose -f docker-compose-all-apps-dev.yml up'
 alias launch-isis-dev='docker compose -f docker-compose-all-apps-dev.yml build && docker compose -f docker-compose-all-apps-dev.yml --profile dev up'
-alias stop-isis='docker compose -f docker-compose-all-apps-dev.yml down'
+alias stop-isis='docker compose -f docker-compose-all-apps-dev.yml down -v --remove-orphans'
+alias clean-isis-db='sudo rm -rf server/postgres/data;sudo rm -rf server/orthanc/orthanc_db'
