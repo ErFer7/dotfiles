@@ -1,0 +1,22 @@
+include "./binds.kdl"
+
+binds {
+    // NOTE: For some laptops (like mine) the keys are different
+    // Home: KP_Home
+    // End: KP_End
+    // Page_Up: KP_Prior
+    // Page_Down: KP_Next
+
+    Mod+KP_Home { focus-column-first; }
+    Mod+KP_End  { focus-column-last; }
+    Mod+Ctrl+KP_Home { move-column-to-first; }
+    Mod+Ctrl+KP_End  { move-column-to-last; }
+
+    Mod+KP_Next      { focus-workspace-down; }
+    Mod+KP_Prior        { focus-workspace-up; }
+    Mod+Ctrl+KP_Next { move-column-to-workspace-down; }
+    Mod+Ctrl+KP_Prior   { move-column-to-workspace-up; }
+
+    Mod+Shift+KP_Next { move-workspace-down; }
+    Mod+Shift+KP_Prior   { move-workspace-up; }
+}

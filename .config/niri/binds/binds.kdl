@@ -1,125 +1,3 @@
-input {
-    keyboard {
-        xkb {
-            layout "br"
-            variant "abnt2"
-        }
-
-        // numlock
-    }
-
-    touchpad {
-        tap
-    }
-
-    trackpoint {
-        off
-    }
-
-    trackball {
-        off
-    }
-}
-
-output "eDP-1" {
-    mode "1920x1080"
-    position x=1280 y=0
-}
-
-// TODO: Config
-output "HDMI-A-2" {}
-
-layout {
-    background-color "transparent"
-    gaps 2
-    center-focused-column "never"
-
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-
-    default-column-width { proportion 0.5; }
-
-    focus-ring {
-        width 1
-        inactive-color "#414868"
-        active-gradient from="#7dcfff" to="#bb9af7" angle=45
-    }
-
-    border {
-        on
-        width 1
-        active-color "#00000000"
-        inactive-color "#414868"
-    }
-
-    struts {
-        left 4
-        right 4
-        top 4
-        bottom 4
-    }
-}
-
-spawn-at-startup "swaylock"
-// TODO: Blue light filter. sunsetr?
-spawn-sh-at-startup "easyeffects --gapplication-service"
-
-hotkey-overlay {
-    skip-at-startup
-}
-
-prefer-no-csd
-
-screenshot-path "~/Images/Screenshots/screenshot-%Y-%m-%d %H-%M-%S.png"
-
-layer-rule {
-    place-within-backdrop true
-}
-
-window-rule {
-    geometry-corner-radius 5
-    clip-to-geometry true
-    open-maximized true
-}
-
-window-rule {
-    match is-focused=false
-
-    border {
-        on
-        width 1
-        inactive-color "#414868"
-    }
-}
-
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
-    match title="^launcher"
-    open-floating true
-    max-width 500
-    max-height 430
-    // default-floating-position x=0 y=4 relative-to="top"
-}
-
-window-rule {
-    match app-id=r#"^(vlc|io.github.niri.screenshare.picker)"#
-    match title=r#"(Open|Save|Select) (File|Folder|Files)"#
-    open-floating true
-}
-
-window-rule {
-    match app-id="kitty"
-    default-column-width { proportion 0.5; }
-    open-maximized false
-}
-
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -157,17 +35,6 @@ binds {
     Mod+Ctrl+Up    { move-window-up; }
     Mod+Ctrl+Right { move-column-right; }
 
-    // NOTE: For some laptops (like mine) the keys are different
-    // Home: KP_Home
-    // End: KP_End
-    // Page_Up: KP_Prior
-    // Page_Down: KP_Next
-
-    Mod+KP_Home { focus-column-first; }
-    Mod+KP_End  { focus-column-last; }
-    Mod+Ctrl+KP_Home { move-column-to-first; }
-    Mod+Ctrl+KP_End  { move-column-to-last; }
-
     Mod+Shift+Left  { focus-monitor-left; }
     Mod+Shift+Down  { focus-monitor-down; }
     Mod+Shift+Up    { focus-monitor-up; }
@@ -177,14 +44,6 @@ binds {
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-
-    Mod+KP_Next      { focus-workspace-down; }
-    Mod+KP_Prior        { focus-workspace-up; }
-    Mod+Ctrl+KP_Next { move-column-to-workspace-down; }
-    Mod+Ctrl+KP_Prior   { move-column-to-workspace-up; }
-
-    Mod+Shift+KP_Next { move-workspace-down; }
-    Mod+Shift+KP_Prior   { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
@@ -265,4 +124,3 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
-

@@ -1,0 +1,7 @@
+output "eDP-1" {
+    mode "1920x1080"
+    position x=1280 y=0
+}
+
+// TODO: Config
+output "HDMI-A-2" {}

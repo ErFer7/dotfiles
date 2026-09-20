@@ -1,0 +1,25 @@
+input {
+    keyboard {
+        xkb {
+            layout "br"
+            variant "abnt2"
+        }
+    }
+
+    mouse {
+        accel-speed 0.0
+        accel-profile "flat"
+    }
+
+    touchpad {
+        tap
+    }
+
+    trackpoint {
+        off
+    }
+
+    trackball {
+        off
+    }
+}

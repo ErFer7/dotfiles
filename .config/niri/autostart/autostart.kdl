@@ -1,0 +1,2 @@
+spawn-at-startup "swaylock"
+spawn-sh-at-startup "easyeffects --gapplication-service"

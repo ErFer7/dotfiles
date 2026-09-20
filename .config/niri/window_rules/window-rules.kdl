@@ -1,0 +1,40 @@
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+    open-maximized true
+}
+
+window-rule {
+    match is-focused=false
+
+    border {
+        on
+        width 1
+        inactive-color "#414868"
+    }
+}
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match title="^launcher"
+    open-floating true
+    max-width 500
+    max-height 430
+    // default-floating-position x=0 y=4 relative-to="top"
+}
+
+window-rule {
+    match app-id=r#"^(vlc|io.github.niri.screenshare.picker)"#
+    match title=r#"(Open|Save|Select) (File|Folder|Files)"#
+    open-floating true
+}
+
+window-rule {
+    match app-id="kitty"
+    default-column-width { proportion 0.5; }
+    open-maximized false
+}

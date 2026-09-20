@@ -1,0 +1,7 @@
+include "input.kdl"
+
+input {
+    keyboard {
+        numlock
+    }
+}
