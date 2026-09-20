@@ -2,7 +2,7 @@ lock 'pidof swaylock || swaylock -f'
 
 before-sleep 'loginctl lock-session'
 
-timeout 150 '[ "$HEFER_MACHINE_TYPE" = "laptop" ] && brightnessctl -s set 10 '[ "$HEFER_MACHINE_TYPE" = "laptop" ] && resume 'brightnessctl -r'
+timeout 150 '[ "$HEFER_MACHINE_TYPE" = "laptop" ] && brightnessctl -s set 10' resume '[ "$HEFER_MACHINE_TYPE" = "laptop" ] && brightnessctl -r'
 timeout 300 'loginctl lock-session'
 timeout 330 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'
 timeout 1800 '[ "$HEFER_MACHINE_TYPE" = "laptop" ] && systemctl suspend'
