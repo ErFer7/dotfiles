@@ -1,0 +1,46 @@
+fade-in=10
+ignore-empty-password
+font=JetBrainsMono Nerd Font
+font-size=32
+indicator-idle-visible
+indicator-radius=128
+indicator-thickness=8
+show-failed-attempts
+
+screenshots
+effect-blur=7x5
+
+clock
+timestr=%H:%M
+datestr=%Y•%m•%d
+
+# Normal State
+inside-color=00000000
+ring-color=414868
+text-color=9aa5ce
+
+# Verification / Checking State
+inside-ver-color=bb9af7
+ring-ver-color=414868
+text-ver-color=414868
+line-ver-color=414868
+
+# Fail State
+inside-wrong-color=1a1b26
+ring-wrong-color=1a1b26
+text-wrong-color=f7768e
+line-wrong-color=1a1b26
+
+# Clear state
+inside-clear-color=1a1b26
+ring-clear-color=1a1b26
+text-clear-color=a9b1d6
+line-clear-color=1a1b26
+
+# Typing Highlights
+key-hl-color=7aa2f7
+bs-hl-color=1a1b26
+
+# Border Transparency
+line-color=00000000
+separator-color=00000000

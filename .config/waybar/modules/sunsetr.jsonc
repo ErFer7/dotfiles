@@ -1,0 +1,11 @@
+{
+  "custom/sunsetr": {
+    "exec": "~/.config/waybar/scripts/sunsetr.sh",
+    "exec-on-event": true,
+    "return-type": "json",
+    "interval": "once",
+    "format": "{icon}",
+    "format-icons": { "disabled": "", "enabled": "󰤄" },
+    "on-click": "~/.config/waybar/scripts/sunsetr.sh toggle",
+  },
+}

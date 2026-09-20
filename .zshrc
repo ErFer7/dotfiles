@@ -25,4 +25,6 @@ plugins=(
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
-source /usr/share/nvm/init-nvm.sh
+
+# TODO: Lazy load this, it's way too slow
+# source /usr/share/nvm/init-nvm.sh

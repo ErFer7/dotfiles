@@ -1,0 +1,9 @@
+{
+  "custom/niri-workspaces": {
+    "exec": "~/.config/waybar/scripts/niri-workspaces.py",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": false,
+    "restart-interval": 1
+  }
+}

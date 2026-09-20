@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export HEFER_MACHINE_TYPE="laptop"
+export CURSOR_SIZE="24"
+export XDG_MENU_PREFIX="arch-"
+
+if [ "$HEFER_MACHINE_TYPE" = "desktop" ]; then
+    export GTK_IM_MODULE="ibus"
+    export XMODIFIERS="@im=ibus"
+    export QT_IM_MODULES="wayland;ibus"
+    export QT_IM_MODULE="ibus"
+fi
+
+exec niri-session

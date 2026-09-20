@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+tmp_shot=$(mktemp --suffix=.png)
+tmp_lock=$(mktemp --suffix=.png)
+
+trap 'rm -f "$tmp_shot" "$tmp_lock"' EXIT
+
+grim "$tmp_shot"
+
+magick "$tmp_shot" -scale 10% -scale 1000% -quality 10 "$tmp_lock"
+
+# swaylock -i "$tmp_lock" -s center

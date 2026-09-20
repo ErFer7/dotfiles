@@ -36,7 +36,7 @@
 @define-color bluetooth-discoverable-color @blue;
 @define-color bluetooth-discovering-color @blue;
 @define-color bluetooth-pairable-color @blue;
-@define-color hyprsunset-color @yellow;
+@define-color sunsetr-color @yellow;
 @define-color clock-color @cyan;
 @define-color cpu-color @blue;
 @define-color gpu-color @green;
@@ -59,7 +59,7 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: alpha(@background, 0.999);
   color: @foreground;
   border-radius: 8px;
   padding: 0 10px;
@@ -72,7 +72,7 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #bluetooth,
-#custom-hyprsunset,
+#custom-sunsetr,
 #clock,
 #cpu,
 #custom-gpu,
@@ -184,8 +184,8 @@ window#waybar {
     color: @bluetooth-pairable-color;
 }
 
-#custom-hyprsunset {
-  color: @hyprsunset-color;
+#custom-sunsetr {
+  color: @sunsetr-color;
 }
 
 #custom-gpu {
