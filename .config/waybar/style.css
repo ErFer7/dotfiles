@@ -37,6 +37,16 @@
 @define-color bluetooth-discovering-color @blue;
 @define-color bluetooth-pairable-color @blue;
 @define-color sunsetr-color @yellow;
+@define-color idle-inhibitor-color @white;
+@define-color idle-inhibitor-activated-color @orange;
+@define-color idle-inhibitor-deactivated-color @white;
+@define-color power-governor-color @white;
+@define-color power-governor-performance-color @blue;
+@define-color power-governor-performance-boost-color @red;
+@define-color power-governor-balanced-color @white;
+@define-color power-governor-balanced-boost-color @magenta;
+@define-color power-governor-powersave-color @green;
+@define-color power-governor-powersave-boost-color @yellow;
 @define-color clock-color @cyan;
 @define-color cpu-color @blue;
 @define-color gpu-color @green;
@@ -73,6 +83,8 @@ window#waybar {
 #pulseaudio,
 #bluetooth,
 #custom-sunsetr,
+#idle_inhibitor,
+#custom-power-governor,
 #clock,
 #cpu,
 #custom-gpu,
@@ -149,43 +161,83 @@ window#waybar {
 }
 
 #bluetooth {
-    color: @bluetooth;
+  color: @bluetooth;
 }
 
 #bluetooth.disabled {
-    color: @bluetooth-disabled-color;
+  color: @bluetooth-disabled-color;
 }
 
 #bluetooth.off {
-    color: @bluetooth-off-color;
+  color: @bluetooth-off-color;
 }
 
 #bluetooth.on {
-    color: @bluetooth-on-color;
+  color: @bluetooth-on-color;
 }
 
 #bluetooth.connected {
-    color: @bluetooth-connected-color;
+  color: @bluetooth-connected-color;
 }
 
 #bluetooth.no-controller {
-    color: @bluetooth-no-controller-color;
+  color: @bluetooth-no-controller-color;
 }
 
 #bluetooth.discoverable {
-    color: @bluetooth-discoverable-color;
+  color: @bluetooth-discoverable-color;
 }
 
 #bluetooth.discovering {
-    color: @bluetooth-discovering-color;
+  color: @bluetooth-discovering-color;
 }
 
 #bluetooth.pairable {
-    color: @bluetooth-pairable-color;
+  color: @bluetooth-pairable-color;
 }
 
 #custom-sunsetr {
   color: @sunsetr-color;
+}
+
+#idle_inhibitor {
+  color: @idle-inhibitor-color;
+}
+
+#idle_inhibitor.activated {
+  color: @idle-inhibitor-activated-color;
+}
+
+#idle_inhibitor.deactivated {
+  color: @idle-inhibitor-deactivated-color;
+}
+
+#custom-power-governor {
+    color: @power-governor-color;
+}
+
+#custom-power-governor.performance-0 {
+    color: @power-governor-performance-color;
+}
+
+#custom-power-governor.performance-1 {
+    color: @power-governor-performance-boost-color;
+}
+
+#custom-power-governor.balanced-0 {
+    color: @power-governor-balanced-color;
+}
+
+#custom-power-governor.balanced-1 {
+    color: @power-governor-balanced-boost-color;
+}
+
+#custom-power-governor.powersave-0 {
+    color: @power-governor-powersave-color;
+}
+
+#custom-power-governor.powersave-1 {
+  color: @power-governor-powersave-boost-color;
 }
 
 #custom-gpu {

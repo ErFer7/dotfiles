@@ -21,7 +21,7 @@ case "$1" in
     echo "{\"alt\":\"enabled\"}"
     ;;
 "toggle")
-    if [ $STATE = "active" ]; then
+    if [ "$STATE" = "active" ]; then
         systemctl --user stop sunsetr.service
         echo "{\"alt\":\"disabled\"}"
     else

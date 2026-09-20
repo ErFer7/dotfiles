@@ -1,0 +1,15 @@
+{
+  "custom/power-governor": {
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "0": "",
+      "1": "",
+      "2": "",
+      "3": ""
+    },
+    "exec": "~/.config/waybar/scripts/power-governor.sh",
+    "tooltip": true,
+    "interval": 1
+  }
+}
