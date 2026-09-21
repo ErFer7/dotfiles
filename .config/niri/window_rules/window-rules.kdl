@@ -22,9 +22,6 @@ window-rule {
 window-rule {
     match title="^launcher"
     open-floating true
-    max-width 500
-    max-height 430
-    default-floating-position x=0 y=256 relative-to="top"  // Fix the weird jump that happens sometimes
 }
 
 window-rule {

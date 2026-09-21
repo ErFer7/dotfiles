@@ -2,6 +2,6 @@
   "custom/app-launcher": {
     "format": "",
     "tooltip-format": "Lauch apps",
-    "on-click": "pkill fsel || kitty --title launcher -e fsel -d",
+    "on-click": "pkill fsel || kitty --title launcher -o remember_window_size=no -o initial_window_width=500 -o initial_window_height=430 -e fsel -d",
   },
 }
