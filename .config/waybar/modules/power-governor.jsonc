@@ -2,6 +2,7 @@
   "custom/power-governor": {
     "return-type": "json",
     "format": "{icon}",
+    "tooltip-format": "{icon}",
     "format-icons": {
       "0": "",
       "1": "",
