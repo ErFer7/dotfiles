@@ -4,4 +4,8 @@ input {
     keyboard {
         numlock
     }
+
+    tablet {
+        left-handed
+    }
 }

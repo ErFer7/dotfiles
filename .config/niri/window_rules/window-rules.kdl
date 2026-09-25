@@ -26,7 +26,7 @@ window-rule {
 
 // TODO: Break this into multiple rules
 window-rule {
-    match app-id=r#"^(vlc|io.github.niri.screenshare.picker|steam|org.pulseaudio.pavucontrol)"#
+    match app-id=r#"^(vlc|io.github.niri.screenshare.picker|org.pulseaudio.pavucontrol)"#
     match title=r#"((Open|Save|Select) (File|Folder|Files)|Friends List|Volume Control)"#
     open-floating true
 }

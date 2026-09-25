@@ -1,4 +1,4 @@
 output "HDMI-A-2" {
     mode "1920x1080"
-    position x=1280 y=0
+    position x=0 y=0
 }
