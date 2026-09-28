@@ -1,20 +1,13 @@
 #!/bin/sh
 
+# Values that can be used here: dekstop and laptop
 export HEFER_MACHINE_TYPE="desktop"
 
 export CURSOR_SIZE="24"
 export XDG_MENU_PREFIX="arch-"
-
-if [ "$HEFER_MACHINE_TYPE" = "desktop" ]; then
-    export GTK_IM_MODULE="ibus"
-    export XMODIFIERS="@im=ibus"
-    export QT_IM_MODULES="wayland;ibus"
-    export QT_IM_MODULE="ibus"
-fi
-
 export NIRI_CONFIG="$HOME/.config/niri/$HEFER_MACHINE_TYPE-config.kdl"
 
 # Just to be safe
-systemctl --user import-environment HEFER_MACHINE_TYPE NIRI_CONFIG CURSOR_SIZE XDG_MENU_PREFIX GTK_IM_MODULE XMODIFIERS QT_IM_MODULES QT_IM_MODULE
+systemctl --user import-environment HEFER_MACHINE_TYPE NIRI_CONFIG CURSOR_SIZE XDG_MENU_PREFIX
 
 exec niri-session
