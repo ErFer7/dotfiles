@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Values that can be used here: dekstop and laptop
-export HEFER_MACHINE_TYPE="desktop"
+# NOTE: HEFER_MACHINE_TYPE lives here
+. "$HOME/.machine"
 
 export CURSOR_SIZE="24"
 export XDG_MENU_PREFIX="arch-"
