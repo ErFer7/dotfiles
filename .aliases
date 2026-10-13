@@ -1,6 +1,5 @@
 # Aliases
 
-alias update="sudo pacman -Syu;yay"
 alias useless='pacman -Qdtq'
 alias autoremove='pacman -Qdtq | sudo pacman -Rs -'
 
